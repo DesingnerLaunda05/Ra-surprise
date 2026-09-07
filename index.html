@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>For Rabiya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Sacramento&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         AUDIO
+    ====================================================== -->
+
+    <audio
+        id="backgroundMusic"
+        src="assests/audio/song.mp3"
+        preload="auto"
+    ></audio>
+
+
+    <!-- =====================================================
+         GLOBAL EFFECTS
+    ====================================================== -->
+
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+
+    <!-- =====================================================
+         SCREEN 1 — INVITATION
+    ====================================================== -->
+
+    <section class="screen screen-1 active" id="screen1">
+
+        <div class="invitation-content">
+
+            <div class="small-label">
+                A LITTLE SOMETHING FOR YOU
+            </div>
+
+            <h1>
+                Hey,<br>
+                <span>Rabiya.</span>
+            </h1>
+
+            <p class="invitation-text">
+                I made something for you.
+            </p>
+
+            <p class="invitation-subtext">
+                It won't take long.<br>
+                Just don't rush through it.
+            </p>
+
+            <button
+                class="primary-button"
+                id="beginButton"
+            >
+                <span>Begin</span>
+                <span class="button-arrow">→</span>
+            </button>
+
+        </div>
+
+        <div class="screen-number">
+            01 / 05
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 2 — REMEMBER
+    ====================================================== -->
+
+    <section class="screen screen-2" id="screen2">
+
+        <div class="remember-background"></div>
+
+        <div class="remember-content">
+
+            <div class="screen-label">
+                A MOMENT IN TIME
+            </div>
+
+            <h2>
+                Remember?
+            </h2>
+
+            <p class="remember-intro">
+                Some moments are ordinary when they happen.
+                <br>
+                Somehow, they become memories later.
+            </p>
+
+
+            <div class="memory-container">
+
+                <div
+                    class="memory-card"
+                    data-memory="0"
+                >
+                    <div class="memory-number">
+                        01
+                    </div>
+
+                    <div class="memory-symbol">
+                        ✦
+                    </div>
+
+                    <p>
+                        Where it all<br>
+                        quietly began.
+                    </p>
+
+                    <span class="memory-hint">
+                        tap to remember
+                    </span>
+                </div>
+
+
+                <div
+                    class="memory-card"
+                    data-memory="1"
+                >
+                    <div class="memory-number">
+                        02
+                    </div>
+
+                    <div class="memory-symbol">
+                        ♡
+                    </div>
+
+                    <p>
+                        One of those<br>
+                        little moments.
+                    </p>
+
+                    <span class="memory-hint">
+                        tap to remember
+                    </span>
+                </div>
+
+
+                <div
+                    class="memory-card"
+                    data-memory="2"
+                >
+                    <div class="memory-number">
+                        03
+                    </div>
+
+                    <div class="memory-symbol">
+                        ∞
+                    </div>
+
+                    <p>
+                        A moment that<br>
+                        stayed.
+                    </p>
+
+                    <span class="memory-hint">
+                        tap to remember
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                class="text-button"
+                id="rememberContinue"
+            >
+                <span>There is more</span>
+                <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="screen-number">
+            02 / 05
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEMORY MODAL
+    ====================================================== -->
+
+    <div
+        class="memory-modal"
+        id="memoryModal"
+    >
+
+        <div class="memory-modal-inner">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+
+            <div class="modal-number">
+                MEMORY
+            </div>
+
+            <h3 id="modalTitle">
+                A little memory
+            </h3>
+
+            <p id="modalText">
+                Some things are worth remembering.
+            </p>
+
+            <div class="modal-line"></div>
+
+            <button
+                class="modal-next"
+                id="modalNext"
+            >
+                continue
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SCREEN 3 — THE WALL
+    ====================================================== -->
+
+    <section class="screen screen-3" id="screen3">
+
+        <div class="wall-header">
+
+            <div class="screen-label">
+                THINGS I ASSOCIATE WITH YOU
+            </div>
+
+            <h2>
+                The Wall
+            </h2>
+
+            <p>
+                Every picture has a little something behind it.
+            </p>
+
+        </div>
+
+
+        <div
+            class="photo-wall"
+            id="photoWall"
+        >
+
+            <!-- PHOTO 01 -->
+            <div
+                class="photo-card"
+                data-message="Your laugh."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/your-laugh.jpg"
+                            alt="Memory 1"
+                            onerror="this.src='https://placehold.co/400x500/eee8df/332d2a?text=Photo+01'"
+                        >
+
+                        <div class="photo-caption">
+                            Your laugh.
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>01</span>
+                        <div class="back-mark">♡</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 02 -->
+            <div
+                class="photo-card"
+                data-message="That little smile."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/little-smile.jpg"
+                            alt="Memory 2"
+                            onerror="this.src='https://placehold.co/400x500/e8e0d7/332d2a?text=Photo+02'"
+                        >
+
+                        <div class="photo-caption">
+                            That little smile.
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>02</span>
+                        <div class="back-mark">✦</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 03 -->
+            <div
+                class="photo-card"
+                data-message="The way you get excited about little things."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/little-things.jpg"
+                            alt="Memory 3"
+                            onerror="this.src='https://placehold.co/400x500/eee9e2/332d2a?text=Photo+03'"
+                        >
+
+                        <div class="photo-caption">
+                            The little things.
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>03</span>
+                        <div class="back-mark">♡</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 04 -->
+            <div
+                class="photo-card"
+                data-message="The face you make when you're pretending you're not annoyed."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/that-expession.jpg"
+                            alt="Memory 4"
+                            onerror="this.src='https://placehold.co/400x500/e7ded4/332d2a?text=Photo+04'"
+                        >
+
+                        <div class="photo-caption">
+                            That Sharmana.
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>04</span>
+                        <div class="back-mark">☼</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 05 -->
+            <div
+                class="photo-card"
+                data-message="Your completely unpredictable chaos."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/your-chaos.jpg"
+                            alt="Memory 5"
+                            onerror="this.src='https://placehold.co/400x500/ede5dc/332d2a?text=Photo+05'"
+                        >
+
+                        <div class="photo-caption">
+                            Your chaos.
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>05</span>
+                        <div class="back-mark">✧</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 06 -->
+            <div
+                class="photo-card"
+                data-message="The version of you that you probably don't realize people notice."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/your-anger.jpg"
+                            alt="Memory 6"
+                            onerror="this.src='https://placehold.co/400x500/e9e1d9/332d2a?text=Photo+06'"
+                        >
+
+                        <div class="photo-caption">
+                            Your Anger
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>06</span>
+                        <div class="back-mark">♡</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 07 -->
+            <div
+                class="photo-card"
+                data-message="A memory I don't think you know I still remember."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/simply-you.jpg"
+                            alt="Memory 7"
+                            onerror="this.src='https://placehold.co/400x500/eee7df/332d2a?text=Photo+07'"
+                        >
+
+                        <div class="photo-caption">
+                            Simply You.
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>07</span>
+                        <div class="back-mark">∞</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- PHOTO 08 -->
+            <div
+                class="photo-card"
+                data-message="There are some things that simply remind me of you."
+            >
+                <div class="photo-inner">
+
+                    <div class="photo-front">
+
+                        <img
+                            src="assests/photos/justtt-you.jpg"
+                            alt="Memory 8"
+                            onerror="this.src='https://placehold.co/400x500/e8dfd6/332d2a?text=Photo+08'"
+                        >
+
+                        <div class="photo-caption">
+                            Justtt youuu .
+                        </div>
+
+                    </div>
+
+                    <div class="photo-back">
+                        <span>08</span>
+                        <div class="back-mark">✦</div>
+                        <small>flip me</small>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="wall-bottom">
+
+            <span id="wallCounter">
+                0 / 8 discovered
+            </span>
+
+            <button
+                class="text-button hidden"
+                id="wallContinue"
+            >
+                <span>Continue</span>
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+        <div class="screen-number">
+            03 / 05
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 4 — THE PAUSE
+    ====================================================== -->
+
+    <section class="screen screen-4" id="screen4">
+
+        <div class="pause-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="pause-content">
+
+            <div class="pause-small">
+                AND NOW...
+            </div>
+
+            <h2>
+                Pause.
+            </h2>
+
+            <div class="pause-divider"></div>
+
+            <p class="pause-text">
+                You've seen a few memories.
+                <br>
+                A few little things I associate with you.
+            </p>
+
+            <p class="pause-final">
+                But there's one last thing.
+            </p>
+
+            <button
+                class="primary-button pause-button"
+                id="pauseContinue"
+            >
+                <span>Continue</span>
+                <span class="button-arrow">→</span>
+            </button>
+
+        </div>
+
+        <div class="screen-number">
+            04 / 05
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 5 — FINAL DOOR
+    ====================================================== -->
+
+    <section class="screen screen-5" id="screen5">
+
+        <div class="door-intro">
+
+            <div class="screen-label">
+                ONE LAST THING
+            </div>
+
+            <p>
+                You've made it this far.
+            </p>
+
+            <h2>
+                There's nothing<br>
+                left to discover.
+            </h2>
+
+            <span>
+                Just one thing left to see.
+            </span>
+
+        </div>
+
+
+        <div
+            class="door-container"
+            id="doorContainer"
+        >
+
+            <div class="door-frame">
+
+                <div class="door door-left">
+                    <div class="door-detail"></div>
+                </div>
+
+                <div class="door door-right">
+                    <div class="door-detail"></div>
+                </div>
+
+                <div class="door-handle">
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="door-button"
+            id="openDoor"
+        >
+            OPEN THE DOOR
+        </button>
+
+
+        <!-- VIDEO PLACEHOLDER -->
+
+        <div
+            class="video-reveal"
+            id="videoReveal"
+        >
+
+            <video
+                id="finalVideo"
+                controls
+                playsinline
+                preload="auto"
+            >
+
+                <source
+                    src="assests/video/rabiya-video.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support video.
+
+            </video>
+
+            <div class="video-placeholder">
+
+                <div class="play-symbol">
+                    ▶
+                </div>
+
+                <p>
+                    Your video will appear here.
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="screen-number">
+            05 / 05
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
