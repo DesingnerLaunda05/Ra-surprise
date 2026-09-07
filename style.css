@@ -817,51 +817,28 @@ h2 {
 }
 
 
-.wall-bottom {
-    position: fixed;
+.wall-footer {
+    width: min(1250px, 94vw);
 
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 80px;
+    margin: 30px auto 60px;
 
     display: flex;
 
-    justify-content: center;
+    justify-content: space-between;
 
     align-items: center;
 
-    background:
-        linear-gradient(
-            to top,
-            #171312,
-            transparent
-        );
+    position: relative;
 
-    z-index: 20;
+    z-index: 10;
 }
 
 #wallCounter {
-    position: absolute;
-
-    left: 30px;
-
-    bottom: 30px;
-
-    font-size: 8px;
+    font-size: 9px;
 
     letter-spacing: 2px;
 
-    opacity: .4;
-}
-
-.wall-bottom .text-button {
-    position: absolute;
-
-    right: 30px;
-
-    bottom: 28px;
+    opacity: .5;
 }
 
 
@@ -1409,14 +1386,9 @@ h2 {
         padding-bottom: 110px;
     }
 
-    #wallCounter {
-        left: 15px;
-        bottom: 22px;
-    }
-
-    .wall-bottom .text-button {
-        right: 15px;
-        bottom: 20px;
+    .wall-footer {
+        width: 92vw;
+        margin: 20px auto 50px;
     }
 
     .photo-caption {
